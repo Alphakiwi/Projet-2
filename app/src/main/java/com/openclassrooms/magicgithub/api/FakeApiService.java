@@ -9,7 +9,7 @@ import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.generat
 
 public class FakeApiService implements ApiService {
 
-    private List<User> users = new LinkedList<User>(generateUsers());
+    private List<User> users = generateUsers();
 
 
     /**
@@ -38,8 +38,14 @@ public class FakeApiService implements ApiService {
         users.remove(user);
     }
 
+
+
+    /**
+     * Add a {@link User} from the {@link FakeApiService#users} list.
+     */
     @Override
     public void addUser(User user) {
         users.add(user);
     }
+
 }

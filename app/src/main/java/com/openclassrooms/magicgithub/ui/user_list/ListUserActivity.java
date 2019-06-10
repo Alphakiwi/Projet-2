@@ -42,6 +42,7 @@ public class ListUserActivity extends BaseActivity implements UserListAdapter.Li
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_user);
+        id = 26;
         configureFab();
         configureFab2();
         configureRecyclerView();
@@ -77,7 +78,7 @@ public class ListUserActivity extends BaseActivity implements UserListAdapter.Li
         fab2.setOnClickListener(view -> {
             login = "Denis";
             rand = new Random();
-            id = rand.nextInt(100); // Gives n such that 0 <= n < 20
+            id += 1;
             avatar = "https://api.adorable.io/AVATARS/512/" + id + ".png";
 
 
